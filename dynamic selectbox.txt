@@ -1,0 +1,48 @@
+$("#type").change(function(){// so bila onchange triggered
+		//opkos kita nak ambik current value, yeah betul
+		//so how, lebih kurang yg atas
+		//kene, cara declare dalam javascript guna, "var", kalau visual basic "dim"
+			var type//variable
+			type = $("#type").val();//so simpan value dalam variable yg bernama type , yes correct
+			//cara troubleshoot kesalahan dalam javscript, guna "alert()" function, yes correct again
+			//so nak checke
+			//alert(type);//betul :*
+			//then lepas dapat value, kita boleh determine mana yg user nak makan lah kan ?
+			//so if type lah pulak
+			if(type == "malay"){
+			//cafe bay leaf, pepper should be available
+				$("#cafe").html("");//utk reset html option dalam select box tu jadi empty
+				$("#cafe").append("<option value='bayleaf' >Bay Leaf</option>");//append, utk 
+				$("#cafe").append("<option value='pepper' >Pepper</option>");
+			}else if(type == "western"){
+			//cafe shazmira cafe, OBreak
+				$("#cafe").html("");
+				$("#cafe").append("<option value='shazmira' >Chef Shazmira Cafe</option>");
+				$("#cafe").append("<option value='obreak' >OBreak Resources</option>");
+			}else if(type == "arabic"){
+			//cafe dallah
+				$("#cafe").html("");
+				$("#cafe").append("<option value='dallah' >Dallah Restaurant</option>");
+			}else if(type == "dessert"){
+			//cafe woodydolly, sehain
+				$("#cafe").html("");
+				$("#cafe").append("<option value='woodydolly' >The WoodyDolly</option>");
+				$("#cafe").append("<option value='sehain' >Sehain Dessert</option>");
+			}else if(type == "drink"){
+			//cafe woodydolly, sehain
+				$("#cafe").html("");
+				$("#cafe").append("<option value='woodydolly' >The WoodyDolly</option>");
+				$("#cafe").append("<option value='sehain' >Sehain Dessert</option>");
+			}else{
+			//all
+				$("#cafe").html("");//utk reset html option dalam select box tu jadi empty
+				$("#cafe").append("<option value='bayleaf' >Bay Leaf</option>");//append, utk 
+				$("#cafe").append("<option value='pepper' >Pepper</option>");
+				$("#cafe").append("<option value='shazmira' >Chef Shazmira Cafe</option>");
+				$("#cafe").append("<option value='obreak' >OBreak Resources</option>");
+				$("#cafe").append("<option value='dallah' >Dallah Restaurant</option>");
+				$("#cafe").append("<option value='woodydolly' >The WoodyDolly</option>");
+				$("#cafe").append("<option value='sehain' >Sehain Dessert</option>");
+				$("#cafe").append("<option value='kungfu' >KungFu Noodle</option>");
+			}
+		});//end first select box
